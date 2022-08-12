@@ -1,0 +1,35 @@
+using System;
+
+namespace Piramid
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int X = int.Parse(Console.ReadLine());
+
+            int A = 1;
+
+            bool isBigger = false;
+
+            for (int row = 0; row <= X; row++)
+            {
+                for (int cols = 0; cols <= row; cols++)
+                {
+                    if (A > X)
+                    {
+                        isBigger = true;
+                        break;
+                    }
+                    Console.Write(A+ " ");
+                    A++;
+                }
+                if (isBigger)
+                {
+                    break;
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
