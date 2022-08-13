@@ -1,0 +1,44 @@
+using System;
+
+namespace Equal_Sums_Even_Odd_Position
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A = int.Parse(Console.ReadLine());
+
+            int B = int.Parse(Console.ReadLine());
+
+            for (int i = A; i <=B  ; i++)
+            {
+                string X = i.ToString();
+
+                int evenSum = 0;
+
+                int oodSum = 0;
+
+                for (int j = 0; j < X.Length; j++)
+                {
+                    int Y = int.Parse(X[j].ToString());
+
+                    if (j%2==0)
+                    {
+                        evenSum += Y;
+
+                    }
+
+                    else
+                    {
+                        oodSum += Y;
+                    }
+                }
+
+                if (evenSum==oodSum)
+                {
+                    Console.Write(i + " ");
+                }
+            }
+        }
+    }
+}
