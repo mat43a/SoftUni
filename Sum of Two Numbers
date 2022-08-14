@@ -1,0 +1,42 @@
+using System;
+
+namespace Sum_of_Two_Numbers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int X = int.Parse(Console.ReadLine());
+
+            int Y = int.Parse(Console.ReadLine());
+
+            int Magic = int.Parse(Console.ReadLine());
+
+            int combination = 0;
+
+            bool MagicNumber = false;
+
+            for (int firstNumber = X; firstNumber <= Y; firstNumber++)
+            {
+                for (int seconNumber = X; seconNumber <= Y; seconNumber++)
+                {
+                    combination++;
+                    if (firstNumber + seconNumber == Magic)
+                    {
+                        MagicNumber = true;
+                        Console.WriteLine($"Combination N:{combination} ({firstNumber} + {seconNumber} = {Magic})");
+                        break;
+                    }
+                }
+                if (MagicNumber)
+                {
+                    break;
+                }
+            }
+            if (!MagicNumber)
+            {
+                Console.WriteLine($"{combination} combinations - neither equals {Magic}");
+            }
+        }
+    }
+}
