@@ -1,0 +1,29 @@
+using System;
+
+namespace Combinations
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int magicNumber = int.Parse(Console.ReadLine());
+
+            int combinations = 0;
+
+            for (int firstNumber = 0; firstNumber <= magicNumber; firstNumber++)
+            {
+                for (int seconNumber = 0; seconNumber <=magicNumber ; seconNumber++)
+                {
+                    for (int thirdNumber = 0; thirdNumber <= magicNumber ; thirdNumber++)
+                    {
+                        if (firstNumber + seconNumber +thirdNumber == magicNumber)
+                        {
+                            combinations++;
+                        }
+                    }
+                }
+            }
+            Console.WriteLine(combinations);
+        }
+    }
+}
