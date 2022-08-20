@@ -1,0 +1,34 @@
+using System;
+
+namespace Building
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int floor = int.Parse(Console.ReadLine());
+
+            int rooms = int.Parse(Console.ReadLine());
+
+            for (int curretFlor = floor; curretFlor >= 1 ; curretFlor--)
+            {
+                for (int curtetRoom = 0; curtetRoom < rooms; curtetRoom++)
+                {
+                    if (curretFlor == floor)
+                    {
+                        Console.Write($"L{curretFlor}{curtetRoom} ");
+                    }
+                    else if (curretFlor % 2 == 0)
+                    {
+                        Console.Write($"O{curretFlor}{curtetRoom} ");
+                    }
+                    else
+                    {
+                        Console.Write($"A{curretFlor}{curtetRoom} ");
+                    }
+                    Console.WriteLine();
+                }
+            }
+        }
+    }
+}
