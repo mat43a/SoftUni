@@ -26,8 +26,9 @@ namespace Building
                     {
                         Console.Write($"A{curretFlor}{curtetRoom} ");
                     }
-                    Console.WriteLine();
+                    
                 }
+                Console.WriteLine();
             }
         }
     }
