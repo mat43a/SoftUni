@@ -1,0 +1,42 @@
+using System;
+
+namespace Train_the_Trainers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int Jury = int.Parse(Console.ReadLine());
+
+            string Presentation = Console.ReadLine();
+
+            double allScore = 0;
+
+            int counter = 0;
+
+            while (Presentation != "Finish")
+            {
+                double score = 0; 
+
+                for (int i = 0; i < Jury; i++)
+                {
+                    double curentScore = double.Parse(Console.ReadLine());
+
+                    score += curentScore;
+                    allScore += curentScore;
+                    counter++;
+
+                }
+                double scorePresentation = score / Jury;
+
+                Console.WriteLine($"{Presentation} - {scorePresentation:F2}."); 
+
+                Presentation = Console.ReadLine();
+            }
+
+            double assessment = allScore / counter;
+
+            Console.WriteLine($"Student's final assessment is {assessment:F2}.");
+        }
+    }
+}
