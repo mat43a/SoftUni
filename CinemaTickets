@@ -1,0 +1,69 @@
+using System;
+
+namespace CinemaTickets
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string nameOfMovie = Console.ReadLine();
+
+            int standart = 0;
+
+            int student = 0;
+
+            int kid = 0;
+
+            while (nameOfMovie != "Finish" )
+            {
+                int freePlaces = int.Parse(Console.ReadLine());
+                int sellTiket = 0;
+
+                while (freePlaces > sellTiket)
+                {
+                    string typeTiket = Console.ReadLine();
+
+                    if (typeTiket == "End")
+                    {
+                        break;
+                    }
+                    if (typeTiket == "standart")
+                    {
+                        standart++;
+                    }
+                    else if (typeTiket == "student")
+                    {
+                        student++;
+                    }
+                    else if (typeTiket == "kid")
+                    {
+                        kid++;
+                    }
+
+                    sellTiket++;
+                }
+
+                double averagePlaces = sellTiket / freePlaces * 100;
+                Console.WriteLine($"{nameOfMovie} - {averagePlaces}% full.");
+
+                nameOfMovie = Console.ReadLine();
+            }
+
+            double allTiket = standart + student + kid;
+
+            double percentStandart = standart / allTiket * 100;
+
+            double percentStudent = student / allTiket * 100;
+
+            double percentKid = kid / allTiket * 100;
+
+            Console.WriteLine($"All tikets: {allTiket}.");
+
+            Console.WriteLine($"{percentStandart:F2}% student tikets.");
+
+            Console.WriteLine($"{percentStudent:F2}% student tikets.");
+
+            Console.WriteLine($"{percentKid:F2}% kid tikets.");
+        }
+    }
+}
