@@ -1,0 +1,20 @@
+using System;
+
+namespace EXCELLENT
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double abc = double.Parse(Console.ReadLine());
+            bool result = abc >= 5.50;
+            if (result) 
+            {
+                Console.WriteLine("Excellent!");
+            }
+
+            
+           
+        }
+    }
+}
