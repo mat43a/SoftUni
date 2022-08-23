@@ -1,0 +1,25 @@
+using System;
+
+namespace Greater_Number
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numOne = int.Parse(Console.ReadLine());
+
+            int numTwo = int.Parse(Console.ReadLine());
+
+            bool isBiggerNum = numOne > numTwo;
+
+            if (isBiggerNum)
+            {
+                Console.WriteLine(numOne);
+            }
+            else
+            {
+                Console.WriteLine(numTwo);
+            }
+        }
+    }
+}
