@@ -1,0 +1,45 @@
+using System;
+
+namespace Godzilla_vs._Kong
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double butget = double.Parse(Console.ReadLine());
+
+            int numberStatist = int.Parse(Console.ReadLine());
+
+            double priceClot = double.Parse(Console.ReadLine());
+
+            double decor = butget * 0.1;
+
+            double costStatist = 0;
+
+            if (numberStatist >= 150)
+            {
+               costStatist = numberStatist * (priceClot - (priceClot * 0.1));
+            }
+            else
+            {
+                costStatist = numberStatist * priceClot;
+            }
+
+            double allCost = decor + costStatist;
+
+            if (allCost > butget)
+            {
+                Console.WriteLine($"Not enough money!");
+
+                Console.WriteLine($"Wingard needs {(Math.Abs(butget-allCost)):F2} leva more.");
+            }
+
+            else if (allCost <= butget)
+            {
+                Console.WriteLine($"Action!");
+
+                Console.WriteLine($"Wingard starts filming with {(butget-allCost):F2} leva left.");
+            }
+        }
+    }
+}
