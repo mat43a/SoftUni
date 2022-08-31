@@ -1,0 +1,18 @@
+using System;
+
+namespace Multiplication_Table
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int firstNum = 1; firstNum <=10 ; firstNum++)
+            {
+                for (int seconNum = 1; seconNum <= 10 ; seconNum++)
+                {
+                    Console.WriteLine($"{firstNum} * {seconNum} = {firstNum * seconNum}");
+                }
+            }
+        }
+    }
+}
