@@ -1,0 +1,61 @@
+using System;
+
+namespace Toy_Shop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double priceExcursion = double.Parse(Console.ReadLine());
+            int toy1 = int.Parse(Console.ReadLine());
+            int toy2 = int.Parse(Console.ReadLine());
+            int toy3 = int.Parse(Console.ReadLine());
+            int toy4 = int.Parse(Console.ReadLine());
+            int toy5 = int.Parse(Console.ReadLine());
+
+            double priceToy1 = 2.60;
+            double priceToy2 = 3;
+            double priceToy3 = 4.10;
+            double priceToy4 = 8.20;
+            double priceToy5 = 2;
+
+            double income = (toy1 * priceToy1) + (toy2 * priceToy2) + (toy3 * priceToy3) + (toy4 * priceToy4) + (toy5 * priceToy5);
+            int number = toy1 + toy2 + toy3 + toy4 + toy5;
+
+            if (number >= 50)
+            {
+               double newIncome= income-(income * 0.25);
+                double rent = newIncome * 0.1;
+                double profit = newIncome - rent;
+                double remain = Math.Abs(profit - priceExcursion);
+
+
+                if (profit>=priceExcursion)
+                {
+                    Console.WriteLine($"Yes! {remain:F2} lv left.");
+                }
+                else
+                {
+                   Console.WriteLine($"Not enough money! {remain:F2} lv needed.");
+                }
+            }
+            else
+            {
+                double rent = income * 0.1;
+                double profit = income - rent;
+                double remain = Math.Abs(profit - priceExcursion);
+
+                if (profit>=priceExcursion)
+                {
+                    Console.WriteLine($"Yes! {remain:F2} lv left.");
+                }
+                else
+                {
+                    Console.WriteLine($"Not enough money! {remain:F2} lv needed.");
+                }
+            }
+
+              
+        }
+    }
+}
