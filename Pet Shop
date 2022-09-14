@@ -1,0 +1,15 @@
+using System;
+
+namespace PetShop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int number1 = int.Parse(Console.ReadLine());
+            int number2 = int.Parse(Console.ReadLine());
+            double sum  = (number1 * 2.5) + (number2 * 4);
+            Console.WriteLine ($" {sum} lv.");
+        }
+    }
+}
