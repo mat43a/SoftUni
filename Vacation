@@ -1,0 +1,48 @@
+using System;
+
+namespace Exam_Preparation
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double moneyNeeded = double.Parse(Console.ReadLine());
+            double moneyAvailable = double.Parse(Console.ReadLine());
+            int totalDay = 0;
+            int spendingDay = 0;
+
+            while (moneyAvailable < moneyNeeded)
+            {
+                string moneyAction = Console.ReadLine();
+                double amont = double.Parse(Console.ReadLine());
+                totalDay++;
+
+                if (moneyAction=="save")
+                {
+                    moneyAvailable += amont;
+                    if (moneyAvailable >= moneyNeeded)
+                    {
+                        Console.WriteLine($"You saved the money for {totalDay} days.");
+                        break;
+                    }
+                    spendingDay = 0;
+                }
+                else if (moneyAction == "spend")
+                {
+                    spendingDay++;
+                    if (spendingDay >= 5)
+                    {
+                        Console.WriteLine("You can't save the money.");
+                        Console.WriteLine(totalDay);
+                        break;
+                    }
+                    moneyAvailable -= amont;
+                    if (moneyAvailable < 0)
+                    {
+                        moneyAvailable = 0;
+                    }
+                }
+            }
+        }
+    }
+}
