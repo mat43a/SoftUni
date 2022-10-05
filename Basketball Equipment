@@ -1,0 +1,24 @@
+using System;
+
+namespace Basketball_Equipment
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double price = double.Parse(Console.ReadLine());
+
+            double shoes = price - (price * 0.4);
+           
+            double team = shoes - (shoes * 0.2);
+            
+            double ball = team * 0.25;
+            
+            double acces = ball * 0.20;
+            
+            double total = price + shoes + team + ball + acces;
+
+            Console.WriteLine(total);
+        }
+    }
+}
