@@ -1,0 +1,34 @@
+using System;
+
+namespace Time___15_Minutes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int hour = int.Parse(Console.ReadLine());
+            int minut = int.Parse(Console.ReadLine());
+
+          
+            int newMinut = minut + 15;
+
+            int totalMinutt = newMinut % 60;
+
+
+            if (newMinut > 59)
+            {
+                hour += 1;
+            }
+            int newHour = hour%24;
+
+             if (totalMinutt < 10)
+            {
+                Console.WriteLine($"{newHour}:0{totalMinutt}");
+            }
+            else
+            {
+                Console.WriteLine($"{newHour}:{totalMinutt}");
+            }
+        }
+    }
+}
