@@ -1,0 +1,34 @@
+using System;
+
+namespace Sum_Seconds
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int firstTime = int.Parse(Console.ReadLine());
+
+            int secontTime = int.Parse(Console.ReadLine());
+
+            int thirtTime = int.Parse(Console.ReadLine());
+
+            int totalTime = firstTime + secontTime + thirtTime;
+
+            int minut = totalTime / 60;
+
+            int secont = totalTime % 60;
+
+            if (secont < 10 )
+            {
+                Console.WriteLine( $"{ minut}:0{ secont}" );
+
+            }   
+            else
+            {
+                Console.WriteLine($"{minut}:{secont}");
+            }
+
+                
+        }
+    }
+}
