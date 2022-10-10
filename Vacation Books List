@@ -1,0 +1,20 @@
+using System;
+
+namespace Vacation_Books_List
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int strInBook = int.Parse(Console.ReadLine());
+
+            int list = int.Parse(Console.ReadLine());
+
+            int day = int.Parse(Console.ReadLine());
+
+            int result = (strInBook / list) / day ; 
+
+            Console.WriteLine(result);
+        }
+    }
+}
