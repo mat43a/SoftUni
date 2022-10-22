@@ -1,0 +1,40 @@
+using System;
+
+namespace Old_Books
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string bookName = Console.ReadLine();
+            int countBook = 0;
+
+            bool isFount = false;
+            string currentBook = Console.ReadLine();
+
+            while (currentBook != "No More Book")
+            {
+                if (currentBook == bookName)
+                {
+                    isFount = true;
+                    break;
+                }
+                else
+                {
+                    countBook++;
+                }
+                currentBook = Console.ReadLine();
+            }
+            if (isFount)
+            {
+                Console.WriteLine($"You checked {countBook} books and found it.");
+            }
+            else
+            {
+                Console.WriteLine("The book you search is not here!");
+                Console.WriteLine($"You checked {countBook} books.");
+            }
+
+        }
+    }
+}
